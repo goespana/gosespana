@@ -1,6 +1,10 @@
 ---
 title: Menú
 draft: false
+  - self-host
+  - grapheneos
+  - herramientas
+  - contacto
 ---
 
 ## Menú de categorías
