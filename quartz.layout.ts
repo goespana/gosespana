@@ -8,7 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GrapheneOS: "https://grapheneos.org/",
+      GrapheneOS: "https://grapheneos.org/"
     },
   }),
 }
