@@ -3,6 +3,10 @@ title: Bienvenido
 draft: false
 tags:
   - privacidad
+  - self-host
+  - grapheneos
+  - herramientas
+  - contacto
 ---
 
 
