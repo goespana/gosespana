@@ -1,6 +1,7 @@
 ---
 title: Menú
 draft: false
+tags:
   - self-host
   - grapheneos
   - herramientas
@@ -12,4 +13,4 @@ draft: false
 - [Auto Hosting](https://goespana.github.io/gosespana/tags/self-host)
 - [Graphene OS](https://goespana.github.io/gosespana/tags/grapheneos)
 - [Herramientas](https://goespana.github.io/gosespana/tags/herramientas)
-- [Colaboración](https://goespana.github.io/gosespana/tags/contacto) a
+- [Colaboración](https://goespana.github.io/gosespana/tags/contacto)
