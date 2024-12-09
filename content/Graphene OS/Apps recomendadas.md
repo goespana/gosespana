@@ -1,7 +1,10 @@
-
-```toc
-```
-
+---
+title: Apps recomendadas
+draft: false
+tags:
+  - grapheneos
+  - privacidad
+---
 
 En github hay un listado enorme de muchas alternativas a las apps mainstream que no respetan nuestra privacidad (https://github.com/pluja/awesome-privacy)
 

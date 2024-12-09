@@ -3,8 +3,6 @@ title: Bienvenido
 draft: false
 tags:
   - privacidad
-  - herramientas
-  - graphene-os
 ---
 
 
