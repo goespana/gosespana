@@ -53,5 +53,8 @@ Mira como colaborar en el apartado de "[Colaboración](https://goespana.github.i
 
 ---
 
-### ¡Explora, aprende y transforma tu experiencia digital!
+## ¡Explora, aprende y transforma tu experiencia digital!
 Nos encantaría conocer tus dudas y sugerencias. Déjanos un comentario o contáctanos directamente. ¡Tu privacidad importa!
+
+## Menú movil
+Si accedes desde un dispositivo movil en la [siguiente página](https://goespana.github.io/gosespana/Otros/menu) encontrarás el listado de categorías, donde podrás leer los diferentes artículos publicados.
