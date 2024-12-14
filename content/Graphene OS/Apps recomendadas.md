@@ -126,3 +126,15 @@ Jitsi Meet es un proyecto de código abierto que permite a los usuarios utilizar
 **Fossify Calendar**: https://github.com/FossifyOrg/Calendar
 
 Fossify también tiene otras apps como un administrador de archivos, app de sms, de telefono, etc. Pero todo esto ya lo tiene GrapheneOS, lo único que el falta de serie es un calendario. Podéis probar también el resto de apps, pero con las nativas de GOS es suficiente.
+
+# Teclado
+**Futo keyboard**: https://keyboard.futo.org/
+
+FUTO Keyboard es un teclado que se está desarrollando, bifurcado del [Teclado AOSP](https://android.googlesource.com/platform/packages/inputmethods/LatinIME/).
+Teclado moderno y personalizable que no sacrifique la privacidad o las libertades.
+
+# VPN
+
+**WG tunnel:** https://github.com/zaneschepke/wgtunnel
+
+Una app cliente VPN alternativa para WireGuard con características adicionales.
