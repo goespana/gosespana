@@ -26,15 +26,3 @@ Cada perfil de usuario tiene sus propias llaves de cifrado basadas en su método
 
 Fuente: https://grapheneos.org/features#improved-user-profiles
 
-## ¿Puede una aplicación ver el contenido de otra aplicación o afectarla de alguna manera?
-No, en GrapheneOS (y en Android en general), una aplicación no puede ver el contenido de otra aplicación ni afectarla directamente. Esto se debe a:
-
-1. **Aislamiento de Aplicaciones**: Cada aplicación se ejecuta en su propio entorno aislado, lo que impide el acceso directo a los datos de otras aplicaciones.
-    
-2. **Permisos**: Las aplicaciones necesitan permisos específicos para acceder a ciertos datos. Sin estos permisos, no pueden interactuar con la información de otras aplicaciones.
-    
-3. **Sandboxing**: Las aplicaciones están "sandboxed", lo que significa que están restringidas en su capacidad para interactuar entre sí, mejorando así la seguridad y la privacidad del usuario.
-
-Fuente: https://source.android.com/docs/security/app-sandbox
-
-
