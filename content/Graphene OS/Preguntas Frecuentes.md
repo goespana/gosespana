@@ -47,4 +47,3 @@ Tabla comparativa de diferentes ROMs:
 https://eylenburg.github.io/android_comparison.htm
 
 
-lalala
