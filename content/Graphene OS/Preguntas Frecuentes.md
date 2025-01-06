@@ -42,6 +42,6 @@ Fuente: https://source.android.com/docs/security/app-sandbox
 
 ## Existe alguna alternativa mejor o parecida a GOS?
 
-Tabla comparativa de diferentes ROMs:
+Tabla comparativa de diferentes ROMs: jajaja
 
 https://eylenburg.github.io/android_comparison.htm
