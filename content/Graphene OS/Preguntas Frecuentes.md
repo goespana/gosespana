@@ -45,3 +45,6 @@ Fuente: https://source.android.com/docs/security/app-sandbox
 Tabla comparativa de diferentes ROMs: 
 
 https://eylenburg.github.io/android_comparison.htm
+
+
+lalala
