@@ -47,3 +47,7 @@ Tabla comparativa de diferentes ROMs:
 https://eylenburg.github.io/android_comparison.htm
 
 
+## Pixel con la pantalla en verde?
+Es un problema de hardware, si puedes que te cambien el dispositivo en la tienda donde lo compraste.
+
+https://support.google.com/pixelphone/thread/238632160/%C2%BFpor-qu%C3%A9-la-pantalla-de-mi-pixel-7-se-puso-verde?hl=es
