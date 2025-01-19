@@ -1,10 +1,3 @@
----
-title: Apps recomendadas
-draft: false
-tags:
-  - grapheneos
-  - privacidad
----
 
 En github hay un listado enorme de muchas alternativas a las apps mainstream que no respetan nuestra privacidad (https://github.com/pluja/awesome-privacy)
 
@@ -82,6 +75,17 @@ Debido a que la app Syncthing ha dejado de dar soporte en Android (https://forum
 
 	AntennaPod es un reproductor de podcast completamente abierto. La aplicación es software libre y puedes suscribirte a cualquier canal RSS. 
 
+# Cámara
+**Cámara Pixel:** https://play.google.com/store/apps/details?id=com.google.android.GoogleCamera&hl=es
+
+La Cámara Pixel (anteriormente conocida como Google Camera) puede aprovechar al máximo las cámaras disponibles y el hardware de procesamiento de imágenes, tal como lo hace en el sistema operativo estándar, y no requiere GSF ni Google Play en modo sandbox en GrapheneOS. El acceso directo a TPU y GXP por parte de las aplicaciones de Google, incluida la Cámara Pixel, está controlado por un interruptor añadido por GrapheneOS y no les proporciona acceso adicional a los datos.
+
+*Fuente: https://grapheneos.org/usage#pixel-camera*
+
+<u>Cómo abrir nuestra galería de fotos desde la Cámara Pixel:</u> https://github.com/CaramelFur/GPhotosShim
+
+Por defecto la Cámara Pixel solo permite abrir la foto directamente desde la app de la Cámara con Google Fotos, sin embargo hay este parche que podemos instalar para poder decidir que galería de fotos queremos que se abra para ver las fotos recién hechas.
+
 # Mapas
 ## App de búsqueda:
 **GMaps WV**: https://github.com/Divested-Mobile/Maps
@@ -98,6 +102,9 @@ Pero todos sabemos que el mejor buscador de lugares es Google, entonces tenemos 
 
 <u>¿Como usarlas de manera conjunta?</u>
 Buscaremos el lugar donde queremos ir en GMaps WV, le daremos a "compartir" y seleccionaremos la app de navegación que tengamos (Organic Maps o  OsmAnd). Seguidamente se abrirá la app con el lugar seleccionado en GMaps WV y ya podremos iniciar la navegación.
+
+
+App para convertir una dirección de Gmaps a coordenadas satélite: https://github.com/jakubvalenta/geoshare
 
 # Notificaciones
 **You Have Mail**: https://f-droid.org/packages/dev.lbeernaert.youhavemail/
@@ -127,14 +134,19 @@ Jitsi Meet es un proyecto de código abierto que permite a los usuarios utilizar
 
 Fossify también tiene otras apps como un administrador de archivos, app de sms, de telefono, etc. Pero todo esto ya lo tiene GrapheneOS, lo único que el falta de serie es un calendario. Podéis probar también el resto de apps, pero con las nativas de GOS es suficiente.
 
-# Teclado
+# Teclados
+
+**Florisboard**: https://github.com/florisboard/florisboard
+
+**Heliboard**: https://github.com/Helium314/HeliBoard
+
 **Futo keyboard**: https://keyboard.futo.org/
 
-FUTO Keyboard es un teclado que se está desarrollando, bifurcado del [Teclado AOSP](https://android.googlesource.com/platform/packages/inputmethods/LatinIME/).
-Teclado moderno y personalizable que no sacrifique la privacidad o las libertades.
+
 
 # VPN
-
 **WG tunnel:** https://github.com/zaneschepke/wgtunnel
 
 Una app cliente VPN alternativa para WireGuard con características adicionales.
+
+
