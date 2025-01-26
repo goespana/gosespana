@@ -181,31 +181,31 @@ sudo apt install libnss3-tools
 
 2. **Navega al directorio donde descargaste el archivo**. Por ejemplo, si lo descargaste en la carpeta `Descargas`, puedes usar:
 
-```
+```bash
 cd ~/Descargas
 ```
 
 3. **Haz el archivo ejecutable**. Ejecuta el siguiente comando para darle permisos de ejecución (cambia el nombre del archivo por el que tu te hayas descargado):
 
-```
+```bash
 chmod +x mkcert-vx.x.x-linux-amd64
 ```
 
 4. **Mover el archivo a un directorio en tu PATH**. Para que puedas ejecutar `mkcert` desde cualquier lugar, mueve el archivo a `/usr/local/bin` (o a otro directorio que esté en tu PATH):
 
-```
+```bash
 sudo mv mkcert-vx.x.x-linux-amd64 /usr/local/bin/mkcert
 ```
 
 5. **Verifica la instalación**. Puedes comprobar que `mkcert` se ha instalado correctamente ejecutando:
    
-```
+```bash
 mkcert --version
 ```
 
 Salida esperada (Tiene que mostrarte la versión que hay instalada) 
 
-```
+```bash
 v1.4.4
 ```
 
@@ -215,7 +215,7 @@ Una vez intalado mkcert, procedemos a:
 
 6. **Instalar la Autoridad Certificadora (CA)**. Finalmente, ejecuta el siguiente comando para instalar la CA que `mkcert` necesita:
 
-```
+```bash
 mkcert -install
 ```
 
