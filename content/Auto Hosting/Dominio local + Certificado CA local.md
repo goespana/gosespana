@@ -94,38 +94,41 @@ Bien, pues para crear un certificado SSL es muy sencillo, primero tenemos que in
 
 1. **Instalar Chocolatey** (si no lo tienes):
    - Abre PowerShell como administrador y ejecuta:
-     ```powershell
-     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-     ```
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
 
 2. **Instalar mkcert**:
    - Una vez que Chocolatey esté instalado, ejecuta:
-     ```powershell
-     choco install mkcert
-     ```
+
+```powershell
+choco install mkcert
+```
 
 3. **Instalar el CA (Autoridad Certificadora)**:
    - Ejecuta el siguiente comando en PowerShell:
+
  ```powershell
 mkcert -install
 ```
 
 ## En macOS
 
-1. **Instalar Homebrew** (si no lo tienes):
-   - Abre la terminal y ejecuta:
+1. **Instalar Homebrew** (si no lo tienes): Abre la terminal y ejecuta:
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-2. **Instalar mkcert**:
-   - Ejecuta el siguiente comando en la terminal:
+2. **Instalar mkcert**: Ejecuta el siguiente comando en la terminal:
+
 ```bash
 brew install mkcert
 ```
 
-3. **Instalar el CA**:
-   - Luego, ejecuta:
+3. **Instalar el CA**: 
+
 ```bash
 mkcert -install
 ```
@@ -158,23 +161,24 @@ Luego, instala `mkcert` usando `snap`:
 sudo snap install mkcert
 ```
 
+Si se ha instalado correctamente salta al **punto 6** de mas abajo para **Instalar la Autoridad Certificadora (CA)**
+
 ### Instalación manual de mkcert:
 
 Si prefieres descargarlo manualmente, puedes hacerlo desde el [repositorio de mkcert en GitHub](https://github.com/FiloSottile/mkcert/releases). Descarga la versión adecuada para tu sistema y sigue las instrucciones de instalación.
 
-1. **Instalar dependencias**:
-   - Asegúrate de tener `libnss3-tools` instalado. En Ubuntu, puedes instalarlo con:
+**Instalar dependencias**: Asegúrate de tener `libnss3-tools` instalado. En Ubuntu, puedes instalarlo con:
+
 ```bash
 sudo apt install libnss3-tools
 ```
 
-2. **Descargar mkcert**:
-   - Ve a la [página de lanzamientos de mkcert en GitHub](https://github.com/FiloSottile/mkcert/releases) y descarga la versión adecuada para tu sistema. Para linux será algo asi como `mkcert-vx.x.x-linux-amd64`
+**Descargar mkcert**: Ve a la [página de lanzamientos de mkcert en GitHub](https://github.com/FiloSottile/mkcert/releases) y descarga la versión adecuada para tu sistema. Para linux será algo asi como `mkcert-vx.x.x-linux-amd64`
 
 #### Instalación de mkcert desde un archivo descargado
 
 1. **Abre una terminal**.
-    
+
 2. **Navega al directorio donde descargaste el archivo**. Por ejemplo, si lo descargaste en la carpeta `Descargas`, puedes usar:
 
 ```
@@ -205,6 +209,9 @@ Salida esperada (Tiene que mostrarte la versión que hay instalada)
 v1.4.4
 ```
 
+---
+
+Una vez intalado mkcert, procedemos a:
 
 6. **Instalar la Autoridad Certificadora (CA)**. Finalmente, ejecuta el siguiente comando para instalar la CA que `mkcert` necesita:
 
@@ -212,7 +219,7 @@ v1.4.4
 mkcert -install
 ```
 
-7. Una vez que `mkcert` esté instalado, puedes crear un certificado para un dominio local con el siguiente comando:
+Una vez hecho todo este proceso ya podemos crear un certificado para un dominio local con el siguiente comando:
 
 ```bash
 mkcert *.server.org
@@ -224,6 +231,7 @@ Esto generará dos archivos:
 `_wildcard.server.org.pem`
 
 Estos dos archivos guárdalos bien, son el certificado y la llave privada de certificado.
+
 El certificado (`_wildcard.server.org-key.pem`) es el archivo que necesitarás instalar en tus dispositivos para que reconozcan el certificado SSL de tus nuevos subdominios.
 
 ### Instalación del certificado en NPM
