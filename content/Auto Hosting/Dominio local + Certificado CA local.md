@@ -139,25 +139,25 @@ Para instalar `mkcert` en Linux utilizando `apt`, puedes seguir estos pasos:
 
 1. **Actualizar el sistema**: Abre una terminal y asegúrate de que tu lista de paquetes esté actualizada.
 
-```
+```bash
 sudo apt update
 ```
 
 2. **Instalar las dependencias necesarias**: `mkcert` requiere `libnss3-tools` para funcionar correctamente. Instálalo con el siguiente comando:
 
-```
+```bash
 sudo apt install libnss3-tools
 ```
 
 3. **Instalar `mkcert`**: A partir de ahora, puedes instalar `mkcert` directamente desde el repositorio de `snap` o descargarlo manualmente. Si prefieres usar `snap`, primero asegúrate de que `snapd` esté instalado:
 
-```
+```bash
 sudo apt install snapd
 ```
 
 Luego, instala `mkcert` usando `snap`:
 
-```
+```bash
 sudo snap install mkcert
 ```
 
