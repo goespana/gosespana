@@ -71,6 +71,7 @@ Se abrirá una ventana, en la pestaña `Details` deberemos rellenar la siguiente
 - **Activar** la opción **Block Common Exploits**
 
 Ejemplo visual:
+
 ![[NPM_NewProxyHost.png]]
 
 Una vez configurado esto, si guardamos veremos en proxy Host en la lista de `sources` y si visitamos `nextcloud.server.org` deberia redirigirnos correctamente a la interfaz web, sin embargo Nextcloud requiere que añadamos en el archivo `config.php` el dominio en la variable `trusted domains`. Si lo has echo con otro servicio deberia dejarte acceder sin tocar nada mas. 
