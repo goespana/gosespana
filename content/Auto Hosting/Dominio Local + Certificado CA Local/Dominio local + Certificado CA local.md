@@ -10,10 +10,14 @@ Antes de empezar, quiero aclarar algunos conceptos:
 
 **DNS (Sistema de Nombres de Dominio)** es como la agenda de contactos de Internet. Cuando quieres visitar un sitio web, en lugar de recordar un número complicado (la dirección IP), solo escribes el nombre del sitio (como www.startpage.com) y el DNS se encarga de encontrar la dirección IP correcta para ti.
 
-Un **proxy inverso** es como un portero en un edificio. Cuando alguien quiere entrar, el portero recibe la solicitud y decide a qué departamento (o servidor) enviar a esa persona. Esto ayuda a gestionar el tráfico y a mantener la seguridad, ya que el portero puede filtrar quién entra y quién no.
+La **reescritura DNS** es una herramienta que nos permite cambiar la dirección que se asocia a un nombre de dominio. Esto es útil si tienes un servidor en casa (como Proxmox) y quieres acceder a diferentes servicios sin tener que recordar las direcciones IP locales, que pueden ser difíciles de manejar.
 
-Ahora, la **reescritura DNS** es una herramienta que nos permite cambiar la dirección que se asocia a un nombre de dominio. Esto es útil si tienes un servidor en casa (como Proxmox) y quieres acceder a diferentes servicios sin tener que recordar las direcciones IP locales, que pueden ser difíciles de manejar.
+Un **proxy inverso** es como un portero en un edificio. Cuando alguien quiere entrar, el portero recibe la solicitud y decide a qué departamento (o servidor) enviar a esa persona. Esto ayuda a gestionar el tráfico y a mantener la seguridad, ya que el portero puede filtrar quién entra y quién no. 
+**NPM** recibe las solicitudes de los clientes (navegadores, aplicaciones, etc.) dirigidas a los dominios que se han configurado (en este caso, `*.server.org`) y las redirige a los servicios internos que están corriendo en la red, utilizando la IP y el puerto que se ha especificado.
 
+**Nginx Proxy Manager (NPM) maneja SSL** obteniendo un certificado que permite cifrar las conexiones, de modo que cuando un usuario accede a un servicio a través de NPM, la información que se envía y recibe está protegida. NPM desencripta la información para procesarla y luego la envía al servicio interno, y cuando el servicio responde, NPM vuelve a cifrar la información antes de enviarla de vuelta al usuario, asegurando así que la comunicación sea segura.
+
+Explicado todo esto, vamos a configurarlo.
 
 # Reescritura DNS en Adguard Home
 Se presupone que ya tenemos una instalación de `Adguard Home`.
