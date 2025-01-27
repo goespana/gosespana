@@ -260,3 +260,27 @@ Si hemos realizado todo correctamente deberíamos poder acceder a nuestro servic
 
 ![[Certificado_SSL_OK.png]]
 
+
+Si aun así no te muestra la web con conexión segura significa que te falta añadir el certificado `_wildcard.server.org-key.pem` al dispositivo.
+
+### En mac 
+
+Abrimos el terminal y pegamos este comando.
+
+```
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /ruta/al/certificado/nombreDelCertificado.pem
+```
+
+ Cambia`/ruta/al/certificado/nombreDelCertificado.pem` por la ruta y el nombre real de tu certificado.
+
+Te pedirá la contraseña de usuario, después abre `Acceso a Llaveros`, localiza el certificado en la pestaña `Sistema` de la barra lateral izquierda. 
+
+Haz doble clic en el certificado, desplegas `Confiar` y cambias:
+`Al utilizar este certificado: Confiar siempre`
+
+
+![[AccesoLlaverosMac_confiarEnCertificado.png]]
+
+Cierras la ventana, te pedirá la contraseña de nuevo y ya tendrás el certificado instalado y funcionando.
+
+![[AccesoLlaverosMac_CertificadoFuncionando.png]]
