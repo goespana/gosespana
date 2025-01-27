@@ -68,11 +68,12 @@ Se abrirá una ventana, en la pestaña `Details` deberemos rellenar la siguiente
 - **Scheme**: Normalmente lo dejaremos en http, pero algunos servicios como proxmox requieren https, eso depende de cada servicio.
 - **Forward Hostname / IP:** Aquí pondremos la IP local de nuestro servicio (en este caso la IP de Nextcloud)
 - **Forward Port**: Aquí pondremos el puerto que usa el servicio (en el caso de Nextcloud por defecto usa el 8080)
-- **Activar** la opción **Block Common Exploits**
+- **Activar** **Block Common Exploits**
+- **Activar Websockets Support**
 
 Ejemplo visual:
 
-![[NPM_NewProxyHost.png]]
+![[NPM_EditProxyHost2.png]]
 
 Una vez configurado esto, si guardamos veremos en proxy Host en la lista de `sources` y si visitamos `nextcloud.server.org` deberia redirigirnos correctamente a la interfaz web, sin embargo Nextcloud requiere que añadamos en el archivo `config.php` el dominio en la variable `trusted domains`. Si lo has echo con otro servicio deberia dejarte acceder sin tocar nada mas. 
 
