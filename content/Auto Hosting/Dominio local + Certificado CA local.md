@@ -264,7 +264,8 @@ Si hemos realizado todo correctamente deberíamos poder acceder a nuestro servic
 
 Si aun así no te muestra la web con conexión segura significa que te falta añadir el certificado `_wildcard.server.org-key.pem` al dispositivo.
 
-### En mac 
+## Instalar el certificado en nuestro dispositivo
+### Instalar el certificado en MacOS 
 
 Abrimos el terminal y pegamos este comando.
 
@@ -285,3 +286,44 @@ Haz doble clic en el certificado, desplegas `Confiar` y cambias:
 Cierras la ventana, te pedirá la contraseña de nuevo y ya tendrás el certificado instalado y funcionando.
 
 ![[AccesoLlaverosMac_CertificadoFuncionando.png]]
+
+
+### Instalar el certificado en Android
+Para poder instalar el certificado en Android también hay que añadir el `rootCA.pem` (la Autoridad Certificadora del certificado) 
+
+Este archivo normalmente está en el directorio `~/.mkcert`.
+
+Si no lo encuentras, puedes exportarlo de esta manera:
+
+```
+mkcert -CAROOT /ruta/donde/deseas/exportar/rootCA.pem
+```
+
+Reemplaza `/ruta/donde/deseas/exportar/` con la ruta donde deseas exportar el archivo `rootCA.pem`.
+
+Si deseas exportar el archivo `rootCA.pem` a un directorio específico y con un nombre específico, puedes utilizar el comando `mkcert` con la opción `-CAROOT` seguida de la ruta y el nombre del archivo:
+
+```
+mkcert -CAROOT /ruta/donde/deseas/exportar/rootCA.pem -o rootCA.pem
+```
+
+Reemplaza `/ruta/donde/deseas/exportar/` con la ruta donde deseas exportar el archivo `rootCA.pem` y `rootCA.pem` con el nombre que deseas darle al archivo.
+
+
+**Copia el archivo de certificado CA a tu dispositivo**: Puedes copiar el archivo de certificado CA a tu dispositivo Android mediante una conexión USB o utilizando una aplicación de transferencia de archivos como `adb`.
+
+**Instala el certificado CA en tu dispositivo**: Para instalar el certificado CA en tu dispositivo, debes seguir los siguientes pasos:
+
+- Abre la aplicación **Configuración** en tu dispositivo.
+- Selecciona **Seguridad** o **Seguridad y ubicación** (dependiendo de la versión de Android).
+- Selecciona **Certificados** o **Certificados de confianza**.
+- Selecciona **Instalar certificado** o **Agregar certificado**.
+- Selecciona el archivo de certificado CA que copiaste en el paso 2.
+- Sigue las instrucciones para instalar el certificado CA.
+
+**Verifica que el certificado CA esté instalado**: Después de instalar el certificado CA, debes verificar que esté instalado correctamente. Puedes hacer esto seleccionando **Certificados** o **Certificados de confianza** en la aplicación **Configuración** y buscando el certificado CA que instalaste.
+
+Una vez que hayas instalado el certificado CA, deberías poder acceder a los dominios con los certificados generados por ti sin problemas.
+
+Recuerda que, si has generado el certificado CA con `mkcert`, debes asegurarte de que el certificado CA esté configurado correctamente en tu dispositivo y que el certificado CA esté instalado en el dispositivo antes de intentar acceder a los dominios con los certificados generados por ti.
+
