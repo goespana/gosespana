@@ -80,7 +80,7 @@ Una vez configurado esto, si guardamos veremos en proxy Host en la lista de `sou
 ### Configuración extra para Nextcloud
 
 #### Config para la web
-Nextcloud requiere que añadamos en el archivo `config.php` el dominio en la variable `trusted domains`. Si lo has echo con otro servicio deberia dejarte acceder sin tocar nada mas. 
+Nextcloud requiere que añadamos en el archivo `config.php` el dominio en la variable `trusted domains`. 
 
 Aquí te dejo el link de la documentación de Nextcloud para hacer esto: https://docs.nextcloud.com/server/29/admin_manual/installation/installation_wizard.html#trusted-domains
 
