@@ -75,15 +75,41 @@ Ejemplo visual:
 
 ![[NPM_EditProxyHost2.png]]
 
-Una vez configurado esto, si guardamos veremos en proxy Host en la lista de `sources` y si visitamos `nextcloud.server.org` deberia redirigirnos correctamente a la interfaz web, sin embargo Nextcloud requiere que añadamos en el archivo `config.php` el dominio en la variable `trusted domains`. Si lo has echo con otro servicio deberia dejarte acceder sin tocar nada mas. 
+Una vez configurado esto, si guardamos veremos en proxy Host en la lista de `sources` y si visitamos `nextcloud.server.org` debería redirigirnos correctamente a la interfaz web. Sin embargo Nextcloud y algunas apps mas necesitan un extra de configuración del lado del servidor:
+
+### Configuración extra para Nextcloud
+
+#### Config para la web
+Nextcloud requiere que añadamos en el archivo `config.php` el dominio en la variable `trusted domains`. Si lo has echo con otro servicio deberia dejarte acceder sin tocar nada mas. 
 
 Aquí te dejo el link de la documentación de Nextcloud para hacer esto: https://docs.nextcloud.com/server/29/admin_manual/installation/installation_wizard.html#trusted-domains
 
 PD: si instalaste Nextcloud como yo en docker compose, este archivo estará en la carpeta nextcloud/cloud/config
 
-**IMPORTANTE:** Debes tener configurado correctamente el DNS en el equipo desde el que quieras acceder al subdomnio, si no, no te va a redirigir correctamente. Básicamente tienes que ir a la configuración de Red, buscar la configuración DNS y poner la IP de tu AdguardHome.
+#### Config para la app
+Buscaremos el archivo config.php de nuestra instalación de nextcloud, en docker esto se encuentra la carpeta `config` dentro de nuestro volumen de la app, ya tu sabe, en el `docker-compose.yml`, en el volumen de la app nextcloud, ahí debería aparecer el path donde está tu carpeta con la config y todo.
 
-SI eres como yo y accedes a los servicios desde fuera de casa con VPN, asegúrate de que la configuración del cliente también tiene la IP DNS correcta, la IP de AdguardHome en este caso.
+Pues bien en el archivo `config.php` tienes que cambiar la linea que pone 
+
+```
+  'overwrite.cli.url' => 'https://nextcloud.example.com
+```
+
+Y añadir estas dos líneas
+
+```
+  'overwriteprotocol' => 'https',  
+  'trusted_proxies' => ['IP_de_tu_NPM_o_Proxy'],
+```
+
+Fuente: Link foro de Nextcloud con la solución: https://help.nextcloud.com/t/macos-and-ios-clients-stuck-in-grant-access-loop/52279/3
+
+-----------------
+
+
+**IMPORTANTE:** Debes **tener configurado correctamente el DNS en el equipo** desde el que quieras acceder al subdomnio, si no, no te va a redirigir correctamente. Básicamente tienes que ir a la configuración de Red, buscar la configuración DNS y poner la IP de tu AdguardHome.
+
+**Si accedes a los servicios desde fuera de casa con VPN**, asegúrate de que la configuración del cliente también tiene la IP DNS correcta, la IP de AdguardHome en este caso.
 
 Bien, hasta aquí hemos conseguido redirigir el subdominio para poder acceder al servicio sin tener que memorizar la IP de cada uno, ahora vamos a crear un certificado SSL para poder acceder con https.
 
@@ -311,6 +337,8 @@ Reemplaza `/ruta/donde/deseas/exportar/` con la ruta donde deseas exportar el ar
 
 
 **Copia el archivo de certificado CA a tu dispositivo**: Puedes copiar el archivo de certificado CA a tu dispositivo Android mediante una conexión USB o utilizando una aplicación de transferencia de archivos como `adb`.
+
+Copiar los certificados via Google Drive o cualquier otra nube puede dar como resultado que no permita instalar dichos certificados en nuestro dispositivo. Si no te funciona con el formato .pem puedes probar a cambiarle la extension a .crt simplemente renombrando el archivo
 
 **Instala el certificado CA en tu dispositivo**: Para instalar el certificado CA en tu dispositivo, debes seguir los siguientes pasos:
 
